@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=None):
-    #Check if matrix = None. 
-    #If None, assign an empty list
+    #Check if matrix = None. If None, assign an empty list
     if matrix is None:
         matrix = []
     
