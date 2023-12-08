@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-def square_matrix_simple(matrix=None):
-    #Check if matrix = None. If None, assign an empty list
-    if matrix is None:
-        matrix = []
-    
-    # Use a list comprehension for clarity and conciseness
-    new_matrix = [[x**2 for x in row] for row in matrix]
-    
-    return new_matrix
+def square_matrix_simple(matrix=[]):
+    new_matrix = matrix.copy()
+
+    for i in range(len(matrix)):
+        new_matrix[i] = list(map(lambda x: x**2, matrix[i]))
+
+    return (new_matrix)
