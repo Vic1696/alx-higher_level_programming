@@ -17,7 +17,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Set the width of the rectangle."""
+        """Get/set the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -30,7 +30,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Set the height of the rectangle."""
+        """Get/set the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -40,17 +40,17 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-        
+
     def area(self):
         """Return the area of the Rectangle."""
-        return self.__width * self.__height
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return 2 * (self.__width + self.__height)
-      
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
+
     def __str__(self):
         """Return the printable representation of the Rectangle.
 
@@ -67,7 +67,7 @@ class Rectangle:
         return ("".join(rect))
 
     def __repr__(self):
-         """Return the string representation of the Rectangle."""
-         rect = "Rectangle(" + str(self.__width)
-         rect += ", " + str(self.__height) + ")"
-         return (rect)
+        """Return the string representation of the Rectangle."""
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
