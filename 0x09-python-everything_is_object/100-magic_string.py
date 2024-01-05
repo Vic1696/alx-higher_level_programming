@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+
+# Initialize n as a global variable
+n = 0
+
 def magic_string():
-    magic_string.n = getattr(magic_string, 'n', 0) + 1
-    return ("BestSchool," * (magic_string.n - 1) + "BestSchool")
+    global n
+    n += 1
+    return ("BestSchool," * (n - 1) + "BestSchool")
